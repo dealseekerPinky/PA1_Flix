@@ -1,0 +1,6 @@
+framework module Pods_week1_Assignment_Flix_Demo {
+  umbrella header "Pods-week1-Assignment-Flix-Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
