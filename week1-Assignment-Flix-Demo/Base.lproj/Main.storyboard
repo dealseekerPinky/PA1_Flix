@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-ii-GU8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-ii-GU8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.63735652134434984" blue="0.88442083298330254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="191" id="jgx-1V-F7f" customClass="MovieCell" customModule="week1_Assignment_Flix_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="191"/>
@@ -30,27 +30,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="190.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg6-Kd-Lra">
-                                                    <rect key="frame" x="15" y="11" width="91" height="165"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fg6-Kd-Lra">
+                                                    <rect key="frame" x="8" y="8" width="102" height="174.5"/>
                                                     <color key="backgroundColor" red="0.43303643662374958" green="1" blue="0.74854917840188939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="102" id="PUn-90-mX8"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-lG-kXe">
-                                                    <rect key="frame" x="123" y="42" width="237" height="133"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-lG-kXe">
+                                                    <rect key="frame" x="118" y="45" width="249" height="21"/>
+                                                    <color key="backgroundColor" red="0.7777059838" green="0.49687540949999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <string key="text">The story of August Pullman – a boy with facial differences – who enters fifth grade, attending a mainstream elementary school for the first time</string>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-Os-6k2">
-                                                    <rect key="frame" x="123" y="0.0" width="240" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-Os-6k2">
+                                                    <rect key="frame" x="118" y="8" width="249" height="29"/>
+                                                    <color key="backgroundColor" red="0.34746338161426527" green="1" blue="0.51947576520359184" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8fE-Os-6k2" secondAttribute="trailing" constant="8" id="3uO-jh-2le"/>
+                                                <constraint firstItem="8fE-Os-6k2" firstAttribute="top" secondItem="edu-vj-AwV" secondAttribute="top" constant="8" id="6L9-QX-dMN"/>
+                                                <constraint firstItem="fg6-Kd-Lra" firstAttribute="leading" secondItem="edu-vj-AwV" secondAttribute="leading" constant="8" id="6qq-f8-dvf"/>
+                                                <constraint firstItem="8fE-Os-6k2" firstAttribute="leading" secondItem="fg6-Kd-Lra" secondAttribute="trailing" constant="8" id="MXK-29-5dK"/>
+                                                <constraint firstAttribute="trailing" secondItem="KAN-lG-kXe" secondAttribute="trailing" constant="8" id="Nd4-Nx-tfD"/>
+                                                <constraint firstAttribute="bottom" secondItem="fg6-Kd-Lra" secondAttribute="bottom" constant="8" id="ZWb-NW-gQ9"/>
+                                                <constraint firstItem="fg6-Kd-Lra" firstAttribute="top" secondItem="edu-vj-AwV" secondAttribute="top" constant="8" id="mVd-Gr-Uzc"/>
+                                                <constraint firstItem="KAN-lG-kXe" firstAttribute="top" secondItem="8fE-Os-6k2" secondAttribute="bottom" constant="8" id="opV-ZK-Yh5"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KAN-lG-kXe" secondAttribute="bottom" constant="8" id="pRj-58-EjX"/>
+                                                <constraint firstItem="KAN-lG-kXe" firstAttribute="leading" secondItem="fg6-Kd-Lra" secondAttribute="trailing" constant="8" id="xhb-Gx-UOx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="KAN-lG-kXe" id="TBT-dt-DAh"/>
@@ -66,7 +80,13 @@
                                 <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.63735652129999998" blue="0.88442083299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kDB-ii-GU8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j9v-lD-LyE"/>
+                            <constraint firstItem="kDB-ii-GU8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kfW-lH-pTp"/>
+                            <constraint firstItem="kDB-ii-GU8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xpR-Cc-dlL"/>
+                            <constraint firstItem="kDB-ii-GU8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zwJ-CM-VXj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

@@ -29,7 +29,8 @@ class NowPlayingViewController: UIViewController , UITableViewDataSource{
         refreshControl.addTarget(self, action: #selector (NowPlayingViewController.didPullToRefresh(_:)), for: . valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
-        tableView.rowHeight = 200
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableViewAutomaticDimension
         fetchMovies()
 
     }
@@ -58,12 +59,9 @@ class NowPlayingViewController: UIViewController , UITableViewDataSource{
                 self.movies = movies
                 self.activityIndicator.isHidden = true
                 self.tableView.isHidden = false
+                self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
-                self.tableView.reloadData()
                 }
-
-                // Reload the table view
-                self.tableView.reloadData()
             
             // tell the refreshControl to stop spining
             self.refreshControl.endRefreshing()
